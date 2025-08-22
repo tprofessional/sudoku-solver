@@ -1,5 +1,10 @@
 # sudoku-solver
-Building a sudoku solver using backtracking
+## Building a sudoku solver using backtracking
+
+As an avid sudoku player, I thought it would be fun to make a sudoku solver to explore how to algorithmically approach solving puzzles.
+The plan is to first implement a brute force method, then apply alpha-beta pruning for better efficiency, and then see if there are smarter ways to solve.
+
+Dev notes:
 
 given a puzzle, run an algorithm that solves the puzzle
 

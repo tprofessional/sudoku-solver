@@ -8,17 +8,19 @@ class Sudoku:
     def __init__(self):
         # 2x2 grid
         self.grid = np.array(ndmin=2)
-        # keys are the row numbers, values are the numbers to prefill as a list
 
 
 '''
+    Checks if a given cell can be assigned value n and maintain a valid board
+
     Args:
         r - row index
         c - col index
         n - number to input in the cell
     
-    Return:
-        True if n is a valid input and False otherwise
+    Returns:
+        True if n is a valid input
+        False otherwise
 '''
 def is_valid(grid, r, c, n):
     # get index of box row and col
@@ -36,6 +38,14 @@ def is_valid(grid, r, c, n):
 
 '''
     Recursive method to  fill in values of the grid until a solution is reached
+    
+    Args:
+        grid - 2x2 grid
+        r - row index
+        c - col index
+    
+    Returns:
+        
 '''
 def solve(grid, r=0, c=0):
     # base case and early stop conditions
