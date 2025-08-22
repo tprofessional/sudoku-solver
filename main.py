@@ -1,15 +1,11 @@
-# referencing https://www.youtube.com/watch?v=eAFcj_2quWI&ab_channel=Insidecode for brute force solver
-# this program is a sudoku solver which employs backtracking to find the solution of a partially prefilled, valid grid
-
-from collections import defaultdict
 import numpy as np
 
 class Sudoku:
     def __init__(self):
-        # 2x2 grid
+        # 2 dimensional array
         self.grid = np.array(ndmin=2)
 
-
+    
 '''
     Checks if a given cell can be assigned value n and maintain a valid board
 
@@ -40,12 +36,12 @@ def is_valid(grid, r, c, n):
     Recursive method to  fill in values of the grid until a solution is reached
     
     Args:
-        grid - 2x2 grid
+        grid - 2 dim array
         r - row index
         c - col index
     
     Returns:
-        
+
 '''
 def solve(grid, r=0, c=0):
     # base case and early stop conditions
@@ -68,4 +64,3 @@ def solve(grid, r=0, c=0):
                 if solve(grid, r, c + 1):
                     return True
     return False
-            
